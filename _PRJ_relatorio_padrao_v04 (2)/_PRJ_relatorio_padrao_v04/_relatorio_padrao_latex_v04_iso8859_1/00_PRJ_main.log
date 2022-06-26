@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.19)  26 JUN 2022 20:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.19)  26 JUN 2022 21:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -408,7 +408,7 @@ LaTeX Info: Redefining \nameref on input line 124.
 \@outlinefile=\write3
 \openout3 = `00_PRJ_main.out'.
 
-<./fig_logo_ISEL.png, id=79, 464.4552pt x 456.7464pt>
+<./fig_logo_ISEL.png, id=83, 464.4552pt x 456.7464pt>
 File: ./fig_logo_ISEL.png Graphic file (type png)
 <use ./fig_logo_ISEL.png>
 Package pdftex.def Info: ./fig_logo_ISEL.png  used on input line 130.
@@ -473,31 +473,27 @@ Cap\'{\i }tulo 5.
 Cap\'{\i }tulo 6.
 ) [11] [12
 
-] (00_PRJ_main.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
-
-) [13
+] (00_PRJ_main.bbl) [13
 
 ] (00_PRJ_main.aux)
 Package rerunfilecheck Info: File `00_PRJ_main.out' has not changed.
-(rerunfilecheck)             Checksum: 731B1D48985C89C0D35666701F46E686;1910.
+(rerunfilecheck)             Checksum: 248F58B86D931AB484EFCFC176510A1D;2010.
  ) 
 Here is how much of TeX's memory you used:
- 11837 strings out of 478582
- 184578 string characters out of 2861228
- 494984 words of memory out of 3000000
- 29805 multiletter control sequences out of 15000+600000
- 475489 words of font info for 49 fonts, out of 8000000 for 9000
+ 11847 strings out of 478582
+ 184688 string characters out of 2861228
+ 495107 words of memory out of 3000000
+ 29811 multiletter control sequences out of 15000+600000
+ 475658 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,13n,63p,237b,419s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 60i,13n,63p,290b,419s stack positions out of 10000i,1000n,20000p,200000b,80000s
 <D:/Latex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Latex/fonts/type1/pub
 lic/amsfonts/cm/cmcsc10.pfb><D:/Latex/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 <D:/Latex/fonts/type1/public/amsfonts/cm/cmsl12.pfb><D:/Latex/fonts/type1/publi
-c/amsfonts/cm/cmti12.pfb>
-Output written on 00_PRJ_main.pdf (21 pages, 217355 bytes).
+c/amsfonts/cm/cmti12.pfb><D:/Latex/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on 00_PRJ_main.pdf (21 pages, 229884 bytes).
 PDF statistics:
- 227 PDF objects out of 1000 (max. 8388607)
- 40 named destinations out of 1000 (max. 500000)
- 158 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 245 PDF objects out of 1000 (max. 8388607)
+ 43 named destinations out of 1000 (max. 500000)
+ 166 words of extra memory for PDF output out of 10000 (max. 10000000)
 
