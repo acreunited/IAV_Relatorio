@@ -1,5 +1,14 @@
 \begin{thebibliography}{}
 
+\bibitem[Flo, ]{FloodFill}
+Flood fill.
+\newblock \url{https://en.wikipedia.org/wiki/Flood_fill}.
+
+\bibitem[Perlin, ]{PerlinNoise}
+Perlin, K.
+\newblock Perlin noise.
+\newblock \url{https://en.wikipedia.org/wiki/Perlin_noise}.
+
 \bibitem[Studios, 2011]{Minecraft}
 Studios, M. (2011).
 \newblock Minecraft.
@@ -9,5 +18,10 @@ Studios, M. (2011).
 Technologies, U. (2005).
 \newblock Unity.
 \newblock \url{https://unity.com/}.
+
+\bibitem[Unity, ]{MLAgents}
+Unity.
+\newblock Ml-agents.
+\newblock \url{https://github.com/Unity-Technologies/ml-agents}.
 
 \end{thebibliography}

@@ -38,7 +38,42 @@ Neste capítulo será ilustrado a forma como o terreno é criado, os tipos de bloco
 \label{sec:terreno}
 %%________________________________________________________________________
 
-forma como o terreno é criado
+A construção do terreno deste projeto é semelhante à do primeiro trabalho prático. Para ser possível termos um mundo infinito, é necessário este estar otimizado, de forma a diminuir o peso computacional. Assim, um mundo é criado continuamente em torno do agente à medida que este se movimenta e por conseguinte, parte do mundo é ?destruído? quando este se afasta
+consideravelmente.
+
+Como dito anteriormente, este projeto visa a criação de um mundo
+\emph{Minecraft} \cite{Minecraft}, ou seja um mundo baseado em cubos. Neste ambiente, existem
+faces que não são visíveis ao jogador, mas que ao serem criadas e
+renderizadas tornam a execução mais lenta. Assim, de forma a reduzir o
+número de triângulos, vértices, etc, e melhorarmos o desempenho, não
+processámos estas faces.
+
+%%________________________________________________________________________
+\subsection{Ruído de Perlin}
+\label{subsec:ruidoperlin}
+%%________________________________________________________________________
+
+O ruído de Perlin \cite{PerlinNoise} é uma técnica muito usada em jogos e utiliza uma série
+de números parcialmente aleatórios com o objetivo de imitar objetos naturais,
+como o sol, nuvens, animações, terrenos, entre outros, e permite o controlo de
+elementos em pequena e grande escala. Utilizamos este ruído de Perlin na nivelação do nosso terreno, ou seja quanto maior for a sua regularização, mais nivelado ficará o terreno.
+
+TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
+
+METER VALOR QUE USAMOS E PORQUE
+
+TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO
+
+%%________________________________________________________________________
+\subsection{Algoritmo Flood Fill}
+\label{subsec:floodfill}
+%%________________________________________________________________________
+
+De modo a ser possível construir os diferentes tipos de blocos,
+utilizamos o algoritmo de Flood Fill \cite{FloodFill} que os desenha recursivamente. Em termos
+gerais, este algoritmo determina a área conectada num nó, dado em um vetor
+multi-dimensional de nós. Isto possibilita-nos a gerar mais do que um bloco do
+mesmo tipo, criando assim blocos vizinhos.
 
 %%________________________________________________________________________
 \section{Blocos}
@@ -66,21 +101,83 @@ Aqui são identificados os agentes autónomos do projeto e a forma como foram trei
 \label{sec:sistemanatural}
 %%________________________________________________________________________
 
-explicar que existem lobos que comem ovelhas etc etc
+Neste projeto, o jogador tem como objetivo manter o funcionamento do sistema natural dos animais.
+
+Existem dois agentes autónomos: lobos e ovelhas. Uma das funcionalidades do jogador consiste em alimentar as ovelhas, mantendo-as vivas. Por sua vez, os lobos procuram ovelhas como fonte de alimento. A vida destes agentes vai diminuindo com o tempo, podendo inclusive chegar ao fim caso não se alimentem. Da mesma forma, a sua vida é prolongada quando se alimentam.
+
+Se o jogador permitir que todas as ovelhas faleçam, os lobos irão morrer também como consequência. É necessário assim manter este equilíbrio natural no maior espaço de tempo possível.
+
+TODOTODOTODOTODOTODO
+se se reproduzem, spawn com o tempo etc
+TODOTODOTODOTODOTODO
 
 %%________________________________________________________________________
 \section{ML-Agents}
 \label{sec:mlagents}
 %%________________________________________________________________________
 
-resumir os ml agents, a rede neuronal e explicar os passos como foram treinados
+O Unity Machine Learning Agents Toolkit (ML-Agents)  \cite{MLAgents} consiste num projeto de
+código aberto, onde jogos e simulações podem servir como ambientes para efetuar o treino de agentes inteligentes. 
+
+Os agentes autónomos foram assim treinados com esta ferramenta. Recorrendo a uma aprendizagem por reforço, os agentes conseguem identificar (através de Raycasts) e consumir a sua respetiva fonte de alimentação - lobos comem ovelhas, e estas comida).
 
 %%________________________________________________________________________
 \section{Ficheiro de Configuração}
 \label{sec:ficheiroconfiguracao}
 %%________________________________________________________________________
 
-explicar o ficheiro usado
+De modo a treinar um agente, é necessário um ficheiro \aspas{. yaml} de configuração, onde é possível definir inúmeros parâmetros diferentes. O ficheiro utilizado encontra-se na figura \ref{fig:config}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics{./config.png}
+	\caption{Ficheiro de Configuração}
+	\label{fig:config}
+\end{figure}
+
+Devido ao número total de parâmetros possíveis definir ser muito elevado, iremos
+dar uma breve explicação dos que foram utilizados neste trabalho:
+
+\begin{itemize}
+	\item batch size - número de experiências de cada iteração.
+	\item buffer size - número de experiências colecionadas antes de atualizar o modelo;
+	\item learning rate - corresponde à taxa de aprendizagem;
+	\item Beta - corresponde à força de regularização entrópico. Quanto maior for este valor, mais ações aleatórias são tomadas;
+	\item Epsilon - influencia a rapidez com que a política evolui durante o treino.	Estamos a utilizar o valor por omissão 0.2;
+	\item Lambd - parâmetro de regularização com valor por defeito de 0.95.
+	Significa o quão um agente depende dos valores atuais. Se este
+	parâmetro possuir um valor baixo, significa que dependerá mais,
+	enquanto que valores altos fazem com que dependa mais nas
+	recompensas recebidas no ambiente
+	\item Num epoch - também o valor por defeito 3, corresponde ao número de
+	passagens a serem feitas pelo buffer ao realizar a otimização de descida
+	de gradiente
+	\item Learning rate schedule - para o nosso tipo de treino (ppo) o valor de
+	defeito é linear. Este decrementa o learning rate de forma linear,
+	chegando a 0 no \aspas{max steps};
+	\item Normalize - valor booleano que diz se a normalização é aplicada ao
+	vetor de observações de entrada;
+	\item Hidden units - o range varia tipicamente entre 32 e 512, no nosso caso
+	estamos a usar o valor 128 que é o valor por omissão. Este, corresponde
+	ao número de unidades que estão completamente conectadas à
+	camada da rede neural;
+	\item Num layers - número de camadas escondidas na rede neural (valor por
+	defeito é 2);
+	\item Gamma - fator de desconto de recompensas futuras a vir do
+	ambiente;
+	\item Strength - fator a ser multiplicado pela recompensa dada pelo
+	ambiente;
+	\item keep checkpoints - número máximo de \aspas{pontos de controle} de modelos
+	a manter. Estamos a usar o valor por defeito (5);
+	\item Max steps - número total de passos que devem ser tomados no ambiente
+	antes do treino terminar;
+	\item Time horizon - Estamos a usar o valor por defeito (64). Significa o número
+	de passos de experiência que cada agente coleciona antes de
+	adicionar ao buffer;
+	\item Summary freq - número de experiências que necessitam ser coletadas
+	antes de gerar e mostrar as estatísticas de treino;
+	
+\end{itemize}
 
 %%________________________________________________________________________
 \chapter{Interface}
@@ -118,6 +215,8 @@ Este capítulo trata a forma como o jogador interage com o ambiente, nomeadamente
 criar e destruir cubos
 
 spawnar comida
+
+vou deixar assim por enquanto no caso de fazermos mais
 
 %%________________________________________________________________________
 \section{Microfone}
