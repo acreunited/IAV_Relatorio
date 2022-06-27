@@ -17,7 +17,8 @@
 \contentsline {section}{\numberline {4.1}Menu}{9}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Lifebar}{9}{section.4.2}%
 \contentsline {chapter}{\numberline {5}Intera\c c\~ao}{11}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Teclado}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Rato e Teclado}{11}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Microfone}{11}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Som}{12}{section.5.3}%
 \contentsline {chapter}{\numberline {6}Conclus\~ao}{13}{chapter.6}%
 \contentsline {chapter}{Bibliografia}{15}{chapter*.4}%

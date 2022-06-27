@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.19)  27 JUN 2022 14:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.19)  27 JUN 2022 21:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -408,7 +408,7 @@ LaTeX Info: Redefining \nameref on input line 124.
 \@outlinefile=\write3
 \openout3 = `00_PRJ_main.out'.
 
-<./fig_logo_ISEL.png, id=91, 464.4552pt x 456.7464pt>
+<./fig_logo_ISEL.png, id=95, 464.4552pt x 456.7464pt>
 File: ./fig_logo_ISEL.png Graphic file (type png)
 <use ./fig_logo_ISEL.png>
 Package pdftex.def Info: ./fig_logo_ISEL.png  used on input line 130.
@@ -425,7 +425,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.23 ...ne {chapter}{Bibliografia}{15}{chapter*.4}
+l.23 ...\numberline {6}Conclus\~ao}{13}{chapter.6}
                                                   % [1
 
 ])
@@ -460,10 +460,10 @@ Cap\'{\i }tulo 3.
 [5
 
 ]
-<./config.png, id=189, 231.86626pt x 358.941pt>
+<./config.png, id=194, 231.86626pt x 358.941pt>
 File: ./config.png Graphic file (type png)
 <use ./config.png>
-Package pdftex.def Info: ./config.png  used on input line 133.
+Package pdftex.def Info: ./config.png  used on input line 135.
 (pdftex.def)             Requested size: 231.86568pt x 358.94011pt.
  [6 <./config.png>] [7] [8]
 Cap\'{\i }tulo 4.
@@ -473,35 +473,39 @@ Cap\'{\i }tulo 4.
 
 ]
 Cap\'{\i }tulo 5.
-[11] [12
 
-]
+Underfull \vbox (badness 1365) has occurred while \output is active []
+
+ [11]
+[12]
 Cap\'{\i }tulo 6.
-) [13] [14
+) [13
+
+] [14
 
 ] (00_PRJ_main.bbl) [15
 
 ] (00_PRJ_main.aux)
 Package rerunfilecheck Info: File `00_PRJ_main.out' has not changed.
-(rerunfilecheck)             Checksum: 92CCA54DD88299A0F0579E47C7EF7CB3;2324.
+(rerunfilecheck)             Checksum: C3E92B97A5FFB5CEA4CFC12B6A8ABC49;2435.
  ) 
 Here is how much of TeX's memory you used:
- 11881 strings out of 478582
- 185147 string characters out of 2861228
- 495377 words of memory out of 3000000
- 29835 multiletter control sequences out of 15000+600000
+ 11884 strings out of 478582
+ 185180 string characters out of 2861228
+ 495415 words of memory out of 3000000
+ 29837 multiletter control sequences out of 15000+600000
  476600 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,13n,63p,437b,504s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 60i,13n,63p,444b,504s stack positions out of 10000i,1000n,20000p,200000b,80000s
  <C:\Users\pncdi\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><D:/Latex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Latex/fonts/typ
 e1/public/amsfonts/cm/cmcsc10.pfb><D:/Latex/fonts/type1/public/amsfonts/cm/cmr1
 2.pfb><D:/Latex/fonts/type1/public/amsfonts/cm/cmsl12.pfb><D:/Latex/fonts/type1
 /public/amsfonts/cm/cmti12.pfb><D:/Latex/fonts/type1/public/amsfonts/cm/cmtt12.
 pfb>
-Output written on 00_PRJ_main.pdf (23 pages, 258093 bytes).
+Output written on 00_PRJ_main.pdf (23 pages, 260805 bytes).
 PDF statistics:
- 286 PDF objects out of 1000 (max. 8388607)
- 51 named destinations out of 1000 (max. 500000)
- 187 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 292 PDF objects out of 1000 (max. 8388607)
+ 52 named destinations out of 1000 (max. 500000)
+ 195 words of extra memory for PDF output out of 10000 (max. 10000000)
 
