@@ -75,6 +75,7 @@ gerais, este algoritmo determina a área conectada num nó, dado em um vetor
 multi-dimensional de nós. Isto possibilita-nos a gerar mais do que um bloco do
 mesmo tipo, criando assim blocos vizinhos.
 
+
 %%________________________________________________________________________
 \section{Blocos}
 \label{sec:blocos}
@@ -84,12 +85,24 @@ tipos de blocos (grass, dirt, stone etc)
 
 mostrar também texturas e materiais
 
+
 %%________________________________________________________________________
 \section{Skybox}
 \label{sec:skybox}
 %%________________________________________________________________________
 
 mostrar aspeto final da skybox
+
+
+
+
+%%________________________________________________________________________
+\subsection{Mundo Escondido}
+\label{subsec:mundoescondido}
+
+De modo a dar uma funcionalidade extra ao jogo, existe um mundo que, inicialmente, se encontra escondido ao jogador. Para ser possível interagir com este mundo, é necessário colecionar 20 blocos de terra, 10 de pedra e 6 de diamante. Neste mundo é gerado de uma forma mais aleatória, onde octaves, smooth e persistence tomam diferentes valores e altera a skybox.
+
+%%________________________________________________________________________
 
 %%________________________________________________________________________
 \section{Som}
@@ -104,7 +117,7 @@ TODO TODO TODO
 \section{B-spline}
 \label{sec:bspline}
 
-De forma a preencher e embelezar o ambiente, foram colocados dragões TODO TODO confirma se são dragóes pls TODO TODO a voar pelo céu. Isto foi possível com a inclusão de B-splines que definem a trajetória do dragão. Assim, enquanto o jogo estiver a decorrer, eles seguirão o trajeto e dão a sensação de vida ao jogo.
+De forma a preencher e embelezar o ambiente, foram colocados dragões a voar pelo céu. Isto foi possível com a inclusão de B-splines que definem a trajetória do dragão. Assim, enquanto o jogo estiver a decorrer, eles seguirão o trajeto e dão a sensação de vida ao jogo.
 
 TODO TODO meter imagens TODO TODO
 
@@ -241,24 +254,19 @@ Este capítulo trata a forma como o jogador interage com o ambiente, nomeadamente
 \label{sec:teclado}
 %%________________________________________________________________________
 
+Com o movimento do rato, o jogador consegue ajustar a câmara e, caso um dos botões do rato seja premido (direito ou esquerdo), um cubo será criado ou destruído, respetivamente.
 
+Caso o jogador possua quatro blocos de pedra, ele tem a possibilidade de criar uma picareta premindo a tecla M. Para facilitar a movimentação entre o mundo, consegue saltar clicando no espaço do teclado.
 
-TODO TODO TODO TODO TODO
-
-Explicar as teclas para destruir, criar, alterar blocos, etcs
-
-TODO TODO TODO TODO TODO
 
 %%________________________________________________________________________
 \section{Microfone}
 \label{sec:microfone}
 %%________________________________________________________________________
 
-TODO TODO TODO TODO TODO
+Para ser possível interagir com o jogo através de áudio, utilizou-se um exemplo dado na aula, nomeadamente se o microfone detetar um som acima de 40 decibéis e a concentração no pico da frequência for superior a um dado valor então assume-se que é um assobio e o jogador irá andar para a frente. 
 
-acho que é trocar a textura de um bloco ?.
-
-TODO TODO TODO TODO TODO
+Assobiar irá trocar o tipo de bloco que o jogador consegue construir. Estes alteram-se num ciclo predeterminado entre TODO TODO TODO terra pedra e ?? TODO TODO TODO
 
 %%________________________________________________________________________
 \chapter{Conclusão}
