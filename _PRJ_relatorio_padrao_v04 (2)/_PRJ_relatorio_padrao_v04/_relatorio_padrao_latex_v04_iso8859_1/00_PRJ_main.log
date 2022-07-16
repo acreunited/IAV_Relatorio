@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.19)  17 JUL 2022 00:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.19)  17 JUL 2022 00:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -493,12 +493,12 @@ o-me-a-da-mente gera^^Xc~ao
 
 ] (00_PRJ_main.aux)
 Package rerunfilecheck Info: File `00_PRJ_main.out' has not changed.
-(rerunfilecheck)             Checksum: 21E64D0482A4FF4037F67C4EF5E77FEB;2643.
+(rerunfilecheck)             Checksum: BB0E3E4F6BC381BB926158EA9596F0DF;2636.
  ) 
 Here is how much of TeX's memory you used:
  11891 strings out of 478582
- 185281 string characters out of 2861228
- 495516 words of memory out of 3000000
+ 185271 string characters out of 2861228
+ 495506 words of memory out of 3000000
  29840 multiletter control sequences out of 15000+600000
  476600 words of font info for 53 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -509,7 +509,7 @@ e1/public/amsfonts/cm/cmcsc10.pfb><D:/Latex/fonts/type1/public/amsfonts/cm/cmr1
 2.pfb><D:/Latex/fonts/type1/public/amsfonts/cm/cmsl12.pfb><D:/Latex/fonts/type1
 /public/amsfonts/cm/cmti12.pfb><D:/Latex/fonts/type1/public/amsfonts/cm/cmtt12.
 pfb>
-Output written on 00_PRJ_main.pdf (25 pages, 269404 bytes).
+Output written on 00_PRJ_main.pdf (25 pages, 269368 bytes).
 PDF statistics:
  312 PDF objects out of 1000 (max. 8388607)
  56 named destinations out of 1000 (max. 500000)
