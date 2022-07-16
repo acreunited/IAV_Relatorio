@@ -31,14 +31,14 @@ TODOTODOTODO esperar final e/ou confirmação led TODOTODOTODOTODO
 \label{ch:ambiente}
 %%________________________________________________________________________
 
-Neste capítulo será ilustrado a forma como o terreno é criado, os tipos de blocos existentes no jogo e o aspeto com a \aspas{Skybox}.
+Neste capítulo será ilustrado a forma como o terreno é criado, os tipos de blocos existentes no jogo, o aspeto do céu e os sons que gera.
 
 %%________________________________________________________________________
 \section{Terreno}
 \label{sec:terreno}
 %%________________________________________________________________________
 
-A construção do terreno deste projeto é semelhante à do primeiro trabalho prático. Para ser possível termos um mundo infinito, é necessário este estar otimizado, de forma a diminuir o peso computacional. Assim, um mundo é criado continuamente em torno do agente à medida que este se movimenta e por conseguinte, parte do mundo é ?destruído? quando este se afasta
+A construção do terreno deste projeto é semelhante à do primeiro trabalho prático. Para ser possível termos um mundo infinito, é necessário este estar otimizado, de forma a diminuir o peso computacional. Assim, um mundo é criado continuamente em torno do agente à medida que este se movimenta e por conseguinte, parte do mundo é destruído quando este se afasta
 consideravelmente.
 
 Como dito anteriormente, este projeto visa a criação de um mundo
@@ -92,6 +92,25 @@ mostrar também texturas e materiais
 mostrar aspeto final da skybox
 
 %%________________________________________________________________________
+\section{Som}
+\label{sec:som}
+%%________________________________________________________________________
+
+TODO TODO TODO
+Falar do som, música ambiente + efeitos sonoros se metermos
+TODO TODO TODO
+
+%%________________________________________________________________________
+\section{B-spline}
+\label{sec:bspline}
+
+De forma a preencher e embelezar o ambiente, foram colocados dragões TODO TODO confirma se são dragóes pls TODO TODO a voar pelo céu. Isto foi possível com a inclusão de B-splines que definem a trajetória do dragão. Assim, enquanto o jogo estiver a decorrer, eles seguirão o trajeto e dão a sensação de vida ao jogo.
+
+TODO TODO meter imagens TODO TODO
+
+%%________________________________________________________________________
+
+%%________________________________________________________________________
 \chapter{Agentes}
 \label{ch:agentes}
 %%________________________________________________________________________
@@ -99,18 +118,18 @@ mostrar aspeto final da skybox
 Aqui são identificados os agentes autónomos do projeto e a forma como foram treinados. 
 
 %%________________________________________________________________________
-\section{Sistema Natural}
+\section{Aves}
 \label{sec:sistemanatural}
 %%________________________________________________________________________
 
-Neste projeto, o jogador tem como objetivo manter o funcionamento do sistema natural dos animais.
+Existem dois agentes autónomos, nomeadamente a presa e o predador. Ambos correspondem a aves, um pintassilgo e uma águia. O objetivo do predador é apanhar a presa, e da mesma forma, o pintassilgo tenta fugir da águia. 
 
-Existem dois agentes autónomos: lobos e ovelhas. Uma das funcionalidades do jogador consiste em alimentar as ovelhas, mantendo-as vivas. Por sua vez, os lobos procuram ovelhas como fonte de alimento. A vida destes agentes vai diminuindo com o tempo, podendo inclusive chegar ao fim caso não se alimentem. Da mesma forma, a sua vida é prolongada quando se alimentam.
+O seu propósito é dar uma maior diversidade ao ambiente, permitindo ao jogador focar-se mais no mundo Minecraft. 
 
-Se o jogador permitir que todas as ovelhas faleçam, os lobos irão morrer também como consequência. É necessário assim manter este equilíbrio natural no maior espaço de tempo possível.
+
 
 TODOTODOTODOTODOTODO
-se se reproduzem, spawn com o tempo etc
+Meter imagens
 TODOTODOTODOTODOTODO
 
 %%________________________________________________________________________
@@ -121,7 +140,13 @@ TODOTODOTODOTODOTODO
 O Unity Machine Learning Agents Toolkit (ML-Agents)  \cite{MLAgents} consiste num projeto de
 código aberto, onde jogos e simulações podem servir como ambientes para efetuar o treino de agentes inteligentes. 
 
-Os agentes autónomos foram assim treinados com esta ferramenta. Recorrendo a uma aprendizagem por reforço, os agentes conseguem identificar (através de Raycasts) e consumir a sua respetiva fonte de alimentação - lobos comem ovelhas, e estas comida).
+Os agentes autónomos foram assim treinados com esta ferramenta. Recorrendo a uma aprendizagem por reforço, os agentes conseguem identificar (através de Raycasts) o seu predador (no caso do pintassilgo) ou a sua presa (se for uma águia).
+
+A metodologia de treinamento foi bastante simples: quando as diferentes aves se tocam, a águia recebe uma recompensa positiva e o pintassilgo uma negativa. o predador continuamente recebe uma penalização mínima, ao contrária da presa que é continuamente beneficiado. 
+
+TODO TODO TODO
+meter aqui o do TP2 
+TODO TODO TODO
 
 %%________________________________________________________________________
 \section{Ficheiro de Configuração}
@@ -133,7 +158,7 @@ De modo a treinar um agente, é necessário um ficheiro \aspas{. yaml} de configur
 \begin{figure}[h]
 	\centering
 	\includegraphics{./config.png}
-	\caption{Ficheiro de Configuração}
+	\caption{Ficheiro de Configuração Presa e Predador}
 	\label{fig:config}
 \end{figure}
 
@@ -193,14 +218,16 @@ Este capítulo ilustra a interface do jogo.
 \label{sec:menu}
 %%________________________________________________________________________
 
-mostrar menu(s)
+TODO TODO TODO
+mostrar o menu inicial e explicar a cena da voz
+TODO TODO TODO
 
 %%________________________________________________________________________
-\section{Lifebar}
-\label{sec:lifebar}
+\section{Menu de Jogo}
+\label{sec:menujogo}
 %%________________________________________________________________________
 
-mostrar lifebars dos animais e/ou outras (acho que queres para o jogador também)
+mostrar o menu do jogo, os blocos e as opções etc
 
 %%________________________________________________________________________
 \chapter{Interação}
@@ -214,13 +241,11 @@ Este capítulo trata a forma como o jogador interage com o ambiente, nomeadamente
 \label{sec:teclado}
 %%________________________________________________________________________
 
-Tendo como objetivo manter a \aspas{vida animal} do ambiente, o jogador consegue criar e destruir cubos, premindo os botões dos lados direito e esquerdo do rato, respetivamente. Assim, consegue controlar mais facilmente o posicionamento destes agentes autónomos.
 
-Apesar dos lobos serem independentes, isto é, conseguem \aspas{caçar} a sua presa sem necessidade de intervenção do jogador, as ovelhas não o são, estando dependentes da intervenção humana para se manter vivas. Para as alimentar, o jogador necessita premir a tecla \emph{F} do teclado, fazendo comida aparecer e atraindo ovelhas.
 
 TODO TODO TODO TODO TODO
 
-CASO CRIEMOS MAIS 
+Explicar as teclas para destruir, criar, alterar blocos, etcs
 
 TODO TODO TODO TODO TODO
 
@@ -229,23 +254,18 @@ TODO TODO TODO TODO TODO
 \label{sec:microfone}
 %%________________________________________________________________________
 
-ainda não temos definido, mas ya é obrigatório
+TODO TODO TODO TODO TODO
 
-%%________________________________________________________________________
-\section{Som}
-\label{sec:som}
-%%________________________________________________________________________
+acho que é trocar a textura de um bloco ?.
 
-Com o intuito de melhorar a experiência do utilizador e não tornar o jogo tão monótono, foi introduzido som, nomeadamente uma música de fundo que toca em \aspas{loop} permanentemente. 
-
-De forma a haver mais interatividade com o jogador, existem sons sonoros em determinadas ações, mais especificamente, acontecem quando: um animal morre; o jogador oferece comida às ovelhas; um animal se alimenta; TODO TODO TODO podemos fazer mais sons, tipo quando jogo termina, salta etc TODO TODO TODO
+TODO TODO TODO TODO TODO
 
 %%________________________________________________________________________
 \chapter{Conclusão}
 \label{ch:conclusao}
 %%________________________________________________________________________
 
-Este projeto final agregou todos os temas lecionados ao longo do semestre, nomeadamente geração procedimental com a construção de um mundo \emph{Minecraft} \cite{Minecraft}, aprendizagem automática onde agentes foram treinados a se alimentarem para sobreviver, e interação Pessoa-Máquina de modo a ser possível ao utilizador interagir e alterar o curso dos acontecimentos.  
+Pode-se concluir que os objetivos do projeto foram concluídos. Todos os temas lecionados ao longo do semestre foram agregados, nomeadamente geração procedimental com a construção de um mundo \emph{Minecraft} \cite{Minecraft}, aprendizagem automática onde diferentes agentes foram treinados e interação Pessoa-Máquina de modo a ser possível ao utilizador interagir e alterar o curso dos acontecimentos.  
 
 Assim, foi possível consolidar os conhecimentos adquiridos ao longo das aulas, que já tinham sido postos em prática nos mini-projetos, em algo mais complexo e onde, havendo inúmeras funcionalidades adicionais que possam ser criadas, seja possível explorar estes conceitos livremente.
 
