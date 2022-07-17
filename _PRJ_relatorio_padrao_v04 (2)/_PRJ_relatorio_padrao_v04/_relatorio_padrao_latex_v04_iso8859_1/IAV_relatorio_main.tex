@@ -131,19 +131,23 @@ TODO TODO meter imagens TODO TODO
 Aqui são identificados os agentes autónomos do projeto e a forma como foram treinados. 
 
 %%________________________________________________________________________
-\section{Aves}
-\label{sec:sistemanatural}
+\section{Variedade}
+\label{sec:variedade}
 %%________________________________________________________________________
 
-Existem dois agentes autónomos, nomeadamente a presa e o predador. Ambos correspondem a aves, um pintassilgo e uma águia. O objetivo do predador é apanhar a presa, e da mesma forma, o pintassilgo tenta fugir da águia. 
-
-O seu propósito é dar uma maior diversidade ao ambiente, permitindo ao jogador focar-se mais no mundo Minecraft. 
-
+Dois dos agentes autónomos são a presa e o predador. Ambos correspondem a aves, um pintassilgo e uma águia. O objetivo do predador é apanhar a presa, e da mesma forma, o pintassilgo tenta fugir da águia. O seu propósito é dar uma maior diversidade ao ambiente, permitindo ao jogador focar-se mais no mundo Minecraft. 
 
 
 TODOTODOTODOTODOTODO
 Meter imagens
 TODOTODOTODOTODOTODO
+
+Também foi reutilizado o agente do segundo trabalho prático. Durante a exploração do mundo, o jogador encontrará ovelhas treinadas a executar uma ação, nomeadamente irem até ao local correto.. 
+
+TODOTODOTODOTODOTODO
+Meter imagens
+TODOTODOTODOTODOTODO
+
 
 %%________________________________________________________________________
 \section{ML-Agents}
@@ -157,9 +161,10 @@ Os agentes autónomos foram assim treinados com esta ferramenta. Recorrendo a uma
 
 A metodologia de treinamento foi bastante simples: quando as diferentes aves se tocam, a águia recebe uma recompensa positiva e o pintassilgo uma negativa. o predador continuamente recebe uma penalização mínima, ao contrária da presa que é continuamente beneficiado. 
 
-TODO TODO TODO
-meter aqui o do TP2 
-TODO TODO TODO
+
+O ambiente das ovelhas consiste num plano onde o agente se consegue movimentar, quatro cubos escalados a fazer de paredes e três quads. Os dois mais afastados representam as duas possibilidades de resposta, e o central a informação necessária para o agente conseguir concluir a tarefa. Isto é, se o quad central for um O ele terá de tocar no O e se for um X
+ele terá de tocar no X. A posição onde o agente começa é aleatória, no entanto é sempre antes do quad central (na metade do plano mais afastada dos dois quads - X e O). A imagem do quad central é aleatória podendo ser um X ou um círculo e os dois quads mais afastados são de
+posição fixa. 
 
 %%________________________________________________________________________
 \section{Ficheiro de Configuração}
@@ -218,6 +223,15 @@ dar uma breve explicação dos que foram utilizados neste trabalho:
 	antes de gerar e mostrar as estatísticas de treino;
 	
 \end{itemize}
+
+O ficheiro de configuração das ovelhas é possível ser visualizado na figura \ref{fig:hallway}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics{./hallway.png}
+	\caption{Ficheiro de Configuração Ovelhas}
+	\label{fig:hallway}
+\end{figure}
 
 %%________________________________________________________________________
 \chapter{Interface}

@@ -13,14 +13,14 @@
 \contentsline {section}{\numberline {2.5}Som}{5}{section.2.5}%
 \contentsline {section}{\numberline {2.6}B-spline}{5}{section.2.6}%
 \contentsline {chapter}{\numberline {3}Agentes}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Aves}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Variedade}{7}{section.3.1}%
 \contentsline {section}{\numberline {3.2}ML-Agents}{7}{section.3.2}%
 \contentsline {section}{\numberline {3.3}Ficheiro de Configura\c c\~ao}{8}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Interface}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Menu}{11}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Menu de Jogo}{11}{section.4.2}%
-\contentsline {chapter}{\numberline {5}Intera\c c\~ao}{13}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Rato e Teclado}{13}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Microfone}{13}{section.5.2}%
-\contentsline {chapter}{\numberline {6}Conclus\~ao}{15}{chapter.6}%
-\contentsline {chapter}{Bibliografia}{17}{chapter*.4}%
+\contentsline {chapter}{\numberline {4}Interface}{13}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Menu}{13}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Menu de Jogo}{13}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Intera\c c\~ao}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Rato e Teclado}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Microfone}{15}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Conclus\~ao}{17}{chapter.6}%
+\contentsline {chapter}{Bibliografia}{19}{chapter*.4}%
